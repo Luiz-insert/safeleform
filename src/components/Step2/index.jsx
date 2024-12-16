@@ -11,9 +11,9 @@ export default function Step2({ onSelectItem }) {
     };
 
     return (
-        <div className="sm:flex flex-row sm:w-2/3 w-full items-center justify-center to-[#033401] from-[#2EB560] bg-gradient-to-tl rounded-2xl shadow-lg sm:py-0 py-0">
+        <div className="sm:flex flex-row sm:w-2/3 h-[280px] w-full items-center justify-center to-[#033401] from-[#2EB560] bg-gradient-to-tl rounded-2xl shadow-lg sm:py-0 py-0">
             <div className="flex items-center justify-center">
-                <img src={Monitores} alt="logo" className='w-[250px] sm:w-full'/>
+                <img src={Monitores} alt="logo" className='h-[180px] sm:w-full'/>
             </div>
             <div className="flex flex-col sm:items-start items-center justify-center sm:gap-16 gap-4 sm:p-4 p-2">
             <p className="text-white text-md sm:text-3xl font-semibold" style={{fontFamily: 'Quicksand'}}>2. Selecione a assinatura anual do monitor</p>

@@ -97,11 +97,11 @@ export default function FormStep0() {
                     </div>
                     <div className="flex flex-col items-center justify-center p-0 w-full gap-4  rounded-lg">
                         {isFormCompleted ? (
-                            <div className="flex flex-col items-center justify-center text-center text-xl font-semibold text-green-600">
+                            <div className="flex flex-col h-80  bg-green-100 sm:bg-white sm:shadow-none shadow-lg  rounded-2xl items-center justify-center text-center text-xl font-semibold text-green-600 gap-4  ">
                                 Tudo pronto!
                                 <CheckCircleIcon className="text-green-600 h-8 w-8" />
                                 <hr />
-                                <p className="text-zinc-600 text-sm sm:text-xl font-semibold" style={{fontFamily: 'Quicksand'}}>Todos os dados foram enviados com sucesso! Entraremos em contato em breve!</p>
+                                <p className="text-zinc-600 text-sm font-semibold" style={{fontFamily: 'Quicksand'}}>Todos os dados foram enviados com sucesso! Entraremos em contato em breve!</p>
                             </div>
                         ) : (
                             <>
