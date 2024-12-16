@@ -33,8 +33,8 @@ function TestForm({ onCompletion }) {
             onChange={(e) => setPhone(e.target.value)}
           />
           <input
-            type="email"
-            placeholder="E-mail"
+            type="text"
+            placeholder="Cidade"
             className="border-2 border-zinc-300 rounded-full px-6 py-2 bg-zinc-50 text-center"
             value={mail}
             onChange={(e) => setEmail(e.target.value)}
