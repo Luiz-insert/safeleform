@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react"
 import TestForm from './TestForm'
 import logoInovaNeg from '../assets/logoGrupoInovaNegativa.png'
-import { Bars4Icon, AdjustmentsHorizontalIcon, CheckCircleIcon } from '@heroicons/react/24/solid'
+import { Bars4Icon, AdjustmentsHorizontalIcon, CheckCircleIcon, CubeIcon} from '@heroicons/react/24/solid'
 import { createClient } from '@supabase/supabase-js';
 
 import Step1 from './Step1'
@@ -88,12 +88,12 @@ export default function FormStep0() {
 
   return (
     <Fragment>
-        <div className="h-screen w-screen bg-slate-600 p-4">
-            <div className="bg-white w-full h-full rounded-xl shadow-lg">
-                <div className="flex flex-col h-full w-full p-4 gap-4">
-                    <div className="flex flex-col px-8 pt-4  h-32 w-full gap-2">
-                        <div className="text-zinc-600 text-sm sm:text-4xl font-semibold flex items-center gap-2" style={{fontFamily: 'Quicksand'}}>   <AdjustmentsHorizontalIcon className="sm:h-8 sm:w-8 h-6 w-6" /> Configure seu Pacote! </div>
-                        <div className="h-2 sm:w-1/3 bg-gradient-to-l to-zinc-300 from-zinc-200 rounded-full"></div>
+        <div className="h-screen w-screen sm:bg-slate-400 sm:p-4">
+            <div className="bg-white w-full h-full sm:rounded-xl sm:shadow-lg">
+                <div className="flex flex-col h-full w-full p-4 sm:gap-4 gap-4">
+                    <div className="flex flex-col items-center sm:justify-center p-4  sm:h-32 w-full gap-2 sm:bg-white bg-zinc-400  rounded-2xl" >
+                        <CubeIcon className="sm:h-8 sm:w-8 h-6 w-6 sm:text-zinc-600 text-zinc-50 animate-pulse" />
+                        <div className="sm:text-zinc-500 text-zinc-50 text-sm sm:text-3xl font-semibold flex items-center gap-2" style={{fontFamily: 'Quicksand'}}> Configure seu Pacote essencial! </div>
                     </div>
                     <div className="flex flex-col items-center justify-center p-0 w-full gap-4  rounded-lg">
                         {isFormCompleted ? (
@@ -106,10 +106,9 @@ export default function FormStep0() {
                         ) : (
                             <>
                                 {currentStep === 1 && (
-                                    <div className="flex h-80 w-full sm:w-2/3 bg-zinc-200 border-2 border-green-900 rounded-2xl shadow-lg">
+                                    <div className="flex h-80 w-full sm:w-2/3 sm:bg-zinc-200 rounded-2xl sm:shadow-lg">
                                         <div className="flex flex-col items-center justify-center w-full">
-                                            <Bars4Icon className="text-zinc-800 h-8 w-8" />
-                                            <p className="text-zinc-700 text-sm sm:text-xl  p-4 font-semibold text-center" style={{fontFamily: 'Quicksand'}}>Preencha o formulário para continuar...</p>
+                                            <p className="text-zinc-400 text-sm sm:text-xl  p-4 font-semibold text-center" style={{fontFamily: 'Quicksand'}}>*Preencha o formulário para continuar...</p>
                                             <TestForm onCompletion={(isFilled, name, phone, email) => handleTestFormCompletion(isFilled, name, phone, email)} />
                                             <button 
                                                 onClick={() => {    
